@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&family=Shrikhand&display=swap');
+
+body {
+    margin: 0px;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*============= agencement de la partie header contenant le logo =================*/
+#logo {
+    background: url(../img/ohmyfood@2x.svg);
+    background-size: cover;
+    width: 51%;
+    height: 33px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#container_logo {
+    display: flex;
+    justify-content: center;
+    border-bottom: black 2px solid;
+}
+/*=========== agencement localisation  =============*/
+#container_localisation {
+    display: flex;
+    justify-content: center;
+    border-bottom: blueviolet 2px solid;
+}
+/*============= agencement du bloc reservation =============*/
+#container_reservation {
+    display: flex;
+    background: green;
+    justify-content: center;
+    border-bottom: blue 2px solid;
+}
+#faux_titre {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: -10px;
+}
+#reservation {
+    margin: 10px 30px 40px 30px;
+}
+#reservation p,h1,h2,h3 {
+    text-align: center;
+}
+#bouton {
+    display: flex;
+    justify-content: center;
+}
+/*========= agencement du bloc fonctionnement  ================*/
+#container_fonctionnement {
+    margin-bottom: 30px;
+    background: hotpink;
+}
+.dot {
+    height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.nav_fonctionnement {
+    border: 2px solid black;
+}
