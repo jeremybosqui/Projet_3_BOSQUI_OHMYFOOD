@@ -12,8 +12,8 @@ p {
 #logo {
     background: url(../img/ohmyfood@2x.svg);
     background-size: cover;
-    width: 51%;
-    height: 33px;
+    width: 43%;
+    height: 28px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -54,7 +54,14 @@ p {
 /*========= agencement du bloc fonctionnement  ================*/
 #container_fonctionnement {
     margin-bottom: 30px;
-    background: hotpink;
+    
+}
+#fonctionnement  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    
 }
 .dot {
     height: 25px;
@@ -63,6 +70,105 @@ p {
   border-radius: 50%;
   display: inline-block;
 }
+#dot1 {
+    position: relative;
+    top: 17px;
+    left: -12px;
+}
+#num_1 {
+    position: relative;
+    top: 4px;
+    left: 8px;
+}
+#icon_mobile {
+    margin: 0px 15px 0px 5px;
+}
 .nav_fonctionnement {
     border: 2px solid black;
+    border-radius: 15px 15px 15px 15px;
+    width: 88%;
+    height: 60px;
+    display: flex;
 }
+.nav_fonctionnement p {
+    margin-top: 21px;
+}
+/*================== agencement du bloc des restaurants + images + textes =========================*/
+#container_restaurants {
+    margin-bottom: 60px;
+}
+#restaurant_parent {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px;
+}
+.restaurants_enfants {
+    border: 1px solid black;
+    border-radius: 15px 15px 15px 15px;
+}
+#restau_img1 {
+    background: url(../img/first.jpg);
+    background-size: cover;
+    height: 170px;
+    width: 330px;
+    border-radius: 15px 15px 0px 0px;
+ }
+ #restau_img2 {
+    background: url(../img/second.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 170px;
+    width: 330px;
+    border-radius: 15px 15px 0px 0px;
+ }
+ #restau_img3 {
+     background: url(../img/third.jpg);
+     background-size: cover;
+     background-position: bottom;
+     height: 170px;
+     width: 330px;
+     border-radius: 15px 15px 0px 0px;
+ }
+ #restau_img4 {
+     background: url(../img/fourth.jpg);
+     background-size: cover;
+     background-position: bottom;
+     height: 170px;
+     width: 330px;
+     border-radius: 15px 15px 0px 0px;
+ }
+ /*================ agencement des pages contenant les menus =======================*/
+
+
+
+
+ /*=============== agencement du footer + contact  ========================*/
+ footer {
+     background: rgb(51, 51, 51);
+     padding: 25px;
+ }
+ footer p {
+     margin: 0px;
+     color: white;
+     font-size: 11px;
+     font-weight: 600;
+ }
+ #logo_footer {
+    background: url(../img/logo_white\ .svg);
+    background-size: cover;
+    width: 25%;
+    height: 14px;
+    margin-bottom: 20px;
+ }
+ #texte_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+ }
+ #texte_footer i {
+     font-size: 12px;
+ }
+ #ustensils {
+     margin-right: 6px;
+ }

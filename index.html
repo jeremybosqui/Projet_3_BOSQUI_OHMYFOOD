@@ -30,7 +30,7 @@
             <p id="faux_titre">Réservez le menu qui <br> vous convient</p>
             <p>Découvrez des restaurants d'exception, séléctionés par nos soins.</p>
             <div id="bouton">
-                <button id="btn_explorer"> <p>Explorer nos restaurants</p></button>
+                <button id="btn_explorer"><span>Explorer nos restaurants</span></button>
             </div>
         </div>
     </div>
@@ -38,10 +38,97 @@
     <div id="container_fonctionnement">
         <p>Fonctionnement</p>
         <div id="fonctionnement">
-            <div class="nav_fonctionnement"><span class="dot">1</span><p><i class="fa fa-mobile" aria-hidden="true"></i> Choisissez un restaurant </p></div>
-            <div class="nav_fonctionnement"><span class="dot">2</span><p><i class="fa fa-list" aria-hidden="true"></i> Composez votre menu </p></div>
-            <div class="nav_fonctionnement"><span class="dot">3</span><p><i class="fas fa-store"></i> Dégustez au restaurant </p></div>
+            <div class="nav_fonctionnement">
+                <span id="dot1" class="dot">
+                  <span id="num_1">1</span>
+                </span>
+                <p>
+                  <span id="icon_mobile">
+                      <i class="fa fa-mobile" aria-hidden="true"></i>
+                    </span> 
+                    Choisissez un restaurant 
+                </p>
+            </div>
+            <div class="nav_fonctionnement">
+                <span id="dot2" class="dot">2</span><p><i class="fa fa-list" aria-hidden="true"></i> Composez votre menu </p>
+            </div>
+            <div class="nav_fonctionnement"><span id="dot3" class="dot">3</span><p><i class="fas fa-store"></i> Dégustez au restaurant </p></div>
         </div> 
     </div>
+    <!--début de la partie contenant les cards restau-->
+    <div id="container_restaurants">
+        <p>Restaurants</p>
+        <div id="restaurant_parent">
+            <div class="restaurants_enfants">
+                <div id="restau_img1"></div>
+                <div class="restau_text">
+                    <p>
+                        La palette du goût
+                        <span class="restau_hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                    </p>
+                    <p>
+                        Ménilmontant
+                    </p>
+                </div>
+            </div>
+            <div class="restaurants_enfants">
+                <div id="restau_img2"></div>
+                <div class="restau_text">
+                    <p>
+                        La note enchantée 
+                        <span class="restau_hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                    </p>
+                    <p>
+                        Charonne 
+                    </p>
+                </div>
+            </div>
+            <div class="restaurants_enfants">
+                <div id="restau_img3"></div>
+                <div class="restau_text">
+                    <p>
+                        À la française 
+                        <span class="restau_hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                    </p>
+                    <p>
+                        Cité Rouge
+                    </p>
+                </div>
+            </div>
+            <div class="restaurants_enfants">
+              <div id="restau_img4"></div>
+              <div class="restau_text">
+                <p>
+                    Le délice des sens 
+                    <span class="restau_hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                </p>
+                <p>
+                    Folie-Méricourt
+                </p>
+            </div>  
+            </div>
+        </div>
+    </div>
+    <!--
+        fin du bloc contenant les cards du restau
+    -->
+    <!--début du footer-->
+    <footer>
+      <a href="index.html"><div id="logo_footer"></div></a>
+     <div id="texte_footer">
+        <p>
+            <span id="ustensils"><i class="fas fa-utensils"></i></span> Proposer un restaurant  
+        </p>
+        <p>
+            <span><i class="fas fa-hands-helping"></i></span> Devenir partenaire 
+        </p>
+        <p>
+            Mentions légales 
+        </p>
+        <p>
+            Contact 
+        </p>
+     </div>
+    </footer>
 </body>
 </html>
