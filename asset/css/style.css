@@ -20,20 +20,19 @@ p {
 #container_logo {
     display: flex;
     justify-content: center;
-    border-bottom: black 2px solid;
 }
 /*=========== agencement localisation  =============*/
 #container_localisation {
     display: flex;
     justify-content: center;
-    border-bottom: blueviolet 2px solid;
+    background: #e4e2e2;
+    box-shadow: inset 5px 18px 10px -22px;
 }
 /*============= agencement du bloc reservation =============*/
 #container_reservation {
     display: flex;
-    background: green;
     justify-content: center;
-    border-bottom: blue 2px solid;
+    background: #f2f2f2;
 }
 #faux_titre {
     font-family: 'Roboto', sans-serif;
@@ -95,7 +94,8 @@ p {
 }
 /*================== agencement du bloc des restaurants + images + textes =========================*/
 #container_restaurants {
-    margin-bottom: 60px;
+    background: #f2f2f2;
+    height: 1160px;
 }
 #restaurant_parent {
    display: flex;
@@ -104,8 +104,9 @@ p {
    gap: 10px;
 }
 .restaurants_enfants {
-    border: 1px solid black;
+    box-shadow: 0px 3px 5px -4px;
     border-radius: 15px 15px 15px 15px;
+    background: white;
 }
 #restau_img1 {
     background: url(../img/first.jpg);
