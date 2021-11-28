@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
+/*============  ALL VARIABLE  =======*/
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-icon:gray;
+$margin-modif: 0px 15px 0px 5px;
+/*==========  ALL MIXIN   ============*/
+@mixin texte-btn-custom {
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto',sans-serif;
+}
+@mixin num-modif {
+    position: relative;
+    top: 4px;
+    left: 8px;
+    color: white;
+}
+@mixin dot-modif {
+    position: relative;
+    top: 20px;
+    left: -12px;
+}
+@mixin modif-img-homepage {
+    background-size: cover;
+    height: 170px;
+    width: 325px;
+    border-radius: 15px 15px 0px 0px;
+}
+@mixin text-new {
+    position: relative;
+    left: 225px;
+    height: 15px;
+    top: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 70px;
+    padding: 8px;
+    color: darken($color: $color-tertiary, $amount: 40);
+    background: adjust-hue($color: $color-tertiary, $degrees: -10);
+    border-radius: 3px 3px 3px 3px;
+}
+@mixin href-modif {
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+    cursor: pointer;
+}
+/*===========================*/
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    @include href-modif;
+}
+/*============= agencement de la partie header contenant le logo =================*/
+#logo {
+    background: url(../img/ohmyfood@2x.svg);
+    background-size: cover;
+    width: 43%;
+    height: 28px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+#container_logo {
+    display: flex;
+    justify-content: center;
+}
+/*=========== agencement localisation  =============*/
+#container_localisation {
+    display: flex;
+    justify-content: center;
+    background: #e4e2e2;
+    box-shadow: inset 5px 18px 10px -22px;
+}
+/*============= agencement du bloc reservation =============*/
+#bouton{
+    display: flex;
+    justify-content: center;
+    >#bouton_explorer {
+        padding: 15px;
+        border-radius: 30px 30px 30px 30px;
+        background: linear-gradient( $color-secondary,$color-primary );
+        box-shadow: 0px 5px 14px -7px;
+        border: none;
+        width: 215px;
+        cursor: pointer;
+        >#texte_explorer {
+           @include texte-btn-custom;
+        }
+        
+    }
+}
+#container1 {
+    display: flex;
+    justify-content: center;
+    background: #f2f2f2;
+    height: 280px;
+    &_reservation {
+        margin: 10px 30px 40px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+            text-align: center;
+        }
+    }
+}
+#faux_titre {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: -10px;
+}
+/*========= agencement du bloc fonctionnement  ================*/
+#container2 {
+    height: 355px;
+    &_title {
+        padding: 30px 0px 0px 20px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    &_fonctionnement {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.dot {
+    height: 25px;
+  width: 25px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  display: inline-block;
+}
+#dot1, #dot2, #dot3 {
+    @include dot-modif;
+}
+#num_1, #num_2, #num_3 {
+    @include num-modif;
+}
+#icon_mobile, #icon_list, #icon_store {
+    margin: $margin-modif;
+}
+#icon_mobile i, #icon_list {
+    color: $color-icon;
+}
+#icon_store {
+    color:$color-primary;
+}
+.nav_fonctionnement {
+    border-radius: 15px 15px 15px 15px;
+    width: 325px;
+    height: 65px;
+    display: flex;
+    background: #f2f2f2;
+    border: none;
+    box-shadow: 0px 7px 18px -14px;
+    p {
+        margin-top: 25px;
+    }
+}
+/*================== agencement du bloc des restaurants + images + textes =========================*/
+#container3 {
+    background: #f2f2f2;
+    height: 1200px;
+    &_parent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        >.container3_enfants {
+            box-shadow:  0px 2px 11px -6px;
+            border-radius: 15px 15px 15px 15px;
+            background: white;
+        }
+    }
+}
+
+#restau_title2{
+    padding: 50px 0px 0px 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.restau_text {
+    p {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px 0px 10px;
+    }
+    >.texte_gras2 {
+        font-weight: 600;
+        margin-bottom: -20px;
+        >.restau_hearticon {
+            font-size: 25px;
+        }
+    }
+}
+.nouveau {
+    @include text-new;
+    p {
+        margin: 0px;
+    }
+}
+#restau_img1 {
+    background: url(../img/first.jpg);
+    @include modif-img-homepage;
+ }
+ #restau_img2 {
+    background: url(../img/second.jpg);
+    background-position: center;
+    @include modif-img-homepage;
+ }
+ #restau_img3 {
+    background: url(../img/third.jpg);
+    background-position: bottom;
+    @include modif-img-homepage;
+ }
+#restau_img4 {
+    background: url(../img/fourth.jpg);
+     background-position: bottom;
+     @include modif-img-homepage;
+}
+ /*=============== agencement du footer + contact  ========================*/
+ #footer {
+     &_logo {
+        background: url(../img/logo_white\ .svg);
+        background-size: cover;
+        width: 25%;
+        height: 14px;
+        margin-bottom: 20px;
+     }
+    background: rgb(51, 51, 51);
+    padding: 25px;
+    >#texte_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        #ustensils, #hands {
+            font-size: 12px;
+        }
+     }
+    p {
+        margin: 0px;
+        color: white;
+        font-size: 11px;
+        font-weight: 600;
+    }
+}
+#ustensils {
+    margin: 0px 6px 0px 3px;
+}
+#hands {
+    margin-right: 3px;
+}
+/*======== agencement page menu français  ===========*/
+#back_arrow {
+    position: relative;
+    top: 20px;
+    right: 70px;
+ }
+.contenu_menu {
+    background: white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 7px 18px -14px;
+    padding: 0px 15Px 0px 10px;
+}
+.texte_andprice {
+    display: flex;
+    justify-content: space-between;
+}
+.texte_gras {
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+.price {
+    font-weight: 600;
+}
+#container_frenchmenu {
+    background: #f2f2f2;
+    position: relative;
+    top: -90px;
+    z-index: 100;
+    margin-bottom: -90px;
+    border-radius: 40px 40px 0px 0px;
+}
+#bloc_entree, #bloc_plat, #bloc_dessert {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+#container_frenchmenu h1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Shrikhand',sans-serif;
+    font-weight: 300;
+    padding: 35px 35px 0px 25px;
+}
+#frenchmenu {
+    margin: -30px 20px 0px 20px;
+}
+.mini_titreborder {
+    border-bottom: #99E2D0 3px solid;
+    padding: 0px 0px 5px 0px;
+    width: 40px;
+    margin: 45px 0px 0px 5px;
+}
+#bouton_commander {
+    padding: 12px;
+    border-radius: 25px 25px 25px 25px;
+    background: linear-gradient( #FF79DA,#9356DC );
+    margin: 50px 0px 80px 0px;
+    width: 165px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 5px 14px -7px;
+    >#texte_commander {
+        @include texte-btn-custom;
+    }
+}
+#img_frenchmenu {
+    background: url(../img/third.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 245px;
+}

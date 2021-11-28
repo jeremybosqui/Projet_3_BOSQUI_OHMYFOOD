@@ -25,19 +25,21 @@
         </div>
     </div>
     <!--reservation menu-->
-    <div id="container_reservation">
-        <div id="reservation">
+    <div id="container1">
+        <div id="container1_reservation">
             <p id="faux_titre">Réservez le menu qui <br> vous convient</p>
             <p>Découvrez des restaurants d'exception, séléctionés par nos soins.</p>
             <div id="bouton">
-                <button id="btn_explorer"><span>Explorer nos restaurants</span></button>
+                <button id="bouton_explorer">
+                    <span id="texte_explorer">Explorer nos restaurants</span>
+                </button>
             </div>
         </div>
     </div>
     <!--agencement du bloc fonctionnement-->
-    <div id="container_fonctionnement">
-        <p id="restau_title1">Fonctionnement</p>
-        <div id="fonctionnement">
+    <div id="container2">
+        <p id="container2_title">Fonctionnement</p>
+        <div id="container2_fonctionnement">
             <div class="nav_fonctionnement">
                 <span id="dot1" class="dot">
                   <span id="num_1">1</span>
@@ -74,11 +76,15 @@
         </div> 
     </div>
     <!--début de la partie contenant les cards restau-->
-    <div id="container_restaurants">
+    <div id="container3">
         <p id="restau_title2">Restaurants</p>
-        <div id="restaurant_parent">
-            <div class="restaurants_enfants">
-                <div id="restau_img1"></div>
+        <div id="container3_parent">
+            <div class="container3_enfants">
+                <div id="restau_img1">
+                    <div class="nouveau">
+                        <p>Nouveau</p>
+                    </div>
+                </div>
                 <div class="restau_text">
                     <p class="texte_gras2">
                         La palette du goût
@@ -89,8 +95,12 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurants_enfants">
-                <div id="restau_img2"></div>
+            <div class="container3_enfants">
+                <div id="restau_img2">
+                    <div class="nouveau">
+                        <p>Nouveau</p>
+                    </div>
+                </div>
                 <div class="restau_text">
                     <p class="texte_gras2"> 
                         La note enchantée 
@@ -101,19 +111,21 @@
                     </p>
                 </div>
             </div>
-            <div class="restaurants_enfants">
-                <div id="restau_img3"></div>
+            <div class="container3_enfants">
+                <a href="française.html"><div id="restau_img3"></div> </a>
                 <div class="restau_text">
                     <p class="texte_gras2">
                        <a href="française.html"> À la française </a>
-                        <span class="restau_hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                       <span class="restau_hearticon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
                     </p>
-                    <p>
-                        Cité Rouge
-                    </p>
+                    <a href="française.html">
+                        <p>
+                            Cité Rouge
+                        </p>
+                    </a>
                 </div>
             </div>
-            <div class="restaurants_enfants">
+            <div class="container3_enfants">
               <div id="restau_img4"></div>
               <div class="restau_text">
                 <p class="texte_gras2">
@@ -131,14 +143,14 @@
         fin du bloc contenant les cards du restau
     -->
     <!--début du footer-->
-    <footer>
-      <a href="index.html"><div id="logo_footer"></div></a>
+    <footer id="footer">
+      <a href="index.html"><div id="footer_logo"></div></a>
      <div id="texte_footer">
         <p>
             <span id="ustensils"><i class="fas fa-utensils"></i></span> Proposer un restaurant  
         </p>
         <p>
-            <span><i class="fas fa-hands-helping"></i></span> Devenir partenaire 
+            <span id="hands"><i class="fas fa-hands-helping"></i></span> Devenir partenaire 
         </p>
         <p>
             Mentions légales 
