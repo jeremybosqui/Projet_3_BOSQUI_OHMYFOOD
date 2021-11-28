@@ -1,0 +1,22 @@
+{
+  "name": "projet_3_bosqui_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./asset/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremybosqui/Projet_3_BOSQUI_OHMYFOOD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremybosqui/Projet_3_BOSQUI_OHMYFOOD/issues"
+  },
+  "homepage": "https://github.com/jeremybosqui/Projet_3_BOSQUI_OHMYFOOD#readme",
+  "dependencies": {
+    "sass": "^1.43.5"
+  }
+}
