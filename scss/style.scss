@@ -48,6 +48,12 @@ $margin-modif: 0px 15px 0px 5px;
     overflow: hidden;
     cursor: pointer;
 }
+@mixin img-header-menus {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 245px;
+}
 /*===========================*/
 body, html {
     margin: 0px;
@@ -274,38 +280,40 @@ a {
 }
 .texte_andprice {
     display: flex;
+    font-size: 15px;
     justify-content: space-between;
 }
 .texte_gras {
     font-weight: 600;
+    font-size: 19px;
     margin-bottom: -10px;
 }
 .price {
     font-weight: 600;
 }
-#container_frenchmenu {
+#container_globalmenu {
     background: #f2f2f2;
     position: relative;
-    top: -90px;
+    top: -70px;
     z-index: 100;
-    margin-bottom: -90px;
+    margin-bottom: -70px;
     border-radius: 40px 40px 0px 0px;
 }
 #bloc_entree, #bloc_plat, #bloc_dessert {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
 }
-#container_frenchmenu h1 {
+#container_globalmenu h1 {
     display: flex;
     justify-content: space-between;
     font-family: 'Shrikhand',sans-serif;
     font-weight: 300;
+    font-size: 25px;
     padding: 35px 35px 0px 25px;
 }
-#frenchmenu {
-    margin: -30px 20px 0px 20px;
+#globalmenu {
+    margin: -30px 15px 0px 15px;
 }
 .mini_titreborder {
     border-bottom: #99E2D0 3px solid;
@@ -326,10 +334,19 @@ a {
         @include texte-btn-custom;
     }
 }
-#img_frenchmenu {
+#img1_globalmenu {
     background: url(../img/third.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 245px;
+    @include img-header-menus;
+}
+#img2_globalmenu {
+    background: url(../img/first.jpg);
+   @include img-header-menus;
+}
+#img3_globalmenu {
+    background: url(../img/fourth.jpg);
+    @include img-header-menus;
+}
+#img4_globalmenu {
+    background: url(../img/second.jpg);
+    @include img-header-menus;
 }
