@@ -66,6 +66,7 @@ p {
 a {
     @include href-modif;
 }
+/*=========== test ===============*/
 
 /*============= agencement de la partie header contenant le logo =================*/
 #logo {
@@ -277,11 +278,14 @@ a {
     top: 20px;
     right: 70px;
  }
-.contenu_menu {
+.contenu_menu  {
     background: white;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 7px 18px -14px;
     padding: 0px 15Px 0px 10px;
+    &:hover {
+        background: $color-tertiary;
+    }
 }
 .texte_andprice {
     display: block;
