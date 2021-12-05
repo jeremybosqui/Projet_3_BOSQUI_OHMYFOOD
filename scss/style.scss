@@ -13,6 +13,10 @@ $color-btn-mix: mix( $color-primary,$color-secondary,55% );
     font-weight: 600;
     font-family: 'Roboto',sans-serif;
 }
+@mixin hover-btn {
+    background: lighten($color: $color-btn-mix, $amount: 3);
+    box-shadow: 0px 2px 7px 0px;
+}
 @mixin num-modif {
     position: relative;
     top: 4px;
@@ -101,8 +105,7 @@ a {
         width: 215px;
         cursor: pointer;
         &:hover {
-            background: lighten($color: $color-btn-mix, $amount: 10);
-            box-shadow: 0px 5px 10px 0px;
+            @include hover-btn;
         }
         >#texte_explorer {
            @include texte-btn-custom;
@@ -215,6 +218,47 @@ a {
         }
     }
 }
+/*======= hearticon modif ===========*/
+
+.fa-heart {
+    font-size: 30px;
+  }
+  
+  .heart {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+  }
+  
+  .heart-color {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: scale(0);
+    transition: .8s ease;
+  }
+  
+  .heart:hover {
+    .heart-color {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    background: linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
+  }
+
+/*=========================*/
 .nouveau {
     @include text-new;
     p {
@@ -336,12 +380,15 @@ a {
 #bouton_commander {
     padding: 12px;
     border-radius: 25px 25px 25px 25px;
-    background: linear-gradient( $color-secondary,$color-primary );
+    background: $color-btn-mix;
     margin: 50px 0px 80px 0px;
     width: 165px;
     cursor: pointer;
     border: none;
     box-shadow: 0px 5px 14px -7px;
+    &:hover {
+        @include hover-btn;
+    }
     >#texte_commander {
         @include texte-btn-custom;
     }
