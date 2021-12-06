@@ -281,6 +281,10 @@ a {
 }
 
 /*=============== agencement du footer + contact  ========================*/
+#text_contact {
+  color: white;
+}
+
 #footer {
   background: #333333;
   padding: 25px;

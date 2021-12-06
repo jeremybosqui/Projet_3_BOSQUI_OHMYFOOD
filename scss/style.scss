@@ -285,6 +285,9 @@ a {
      @include modif-img-homepage;
 }
  /*=============== agencement du footer + contact  ========================*/
+ #text_contact {
+     color: white;
+ }
  #footer {
      &_logo {
         background: url(../img/logo_white\ .svg);
