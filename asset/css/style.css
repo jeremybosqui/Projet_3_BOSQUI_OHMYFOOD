@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 /*============  ALL VARIABLE  =======*/
-/*==========  ALL MIXIN   ============*/
 /*===========================*/
 body, html {
   margin: 0px;
@@ -20,7 +19,6 @@ a {
   cursor: pointer;
 }
 
-/*=========== test ===============*/
 /*============= agencement de la partie header contenant le logo =================*/
 #logo {
   background: url(../img/ohmyfood@2x.svg);
@@ -153,7 +151,6 @@ a {
   margin-top: 25px;
 }
 
-/*================== agencement du bloc des restaurants + images + textes =========================*/
 #container3 {
   background: #f2f2f2;
   height: 1200px;
@@ -189,7 +186,6 @@ a {
   font-size: 25px;
 }
 
-/*======= hearticon modif ===========*/
 .fa-heart {
   font-size: 30px;
 }
@@ -280,7 +276,6 @@ a {
   border-radius: 15px 15px 0px 0px;
 }
 
-/*=============== agencement du footer + contact  ========================*/
 #text_contact {
   color: white;
 }
@@ -289,19 +284,19 @@ a {
   background: #333333;
   padding: 25px;
 }
-#footer_logo {
+#footer__logo {
   background: url(../img/logo_white\ .svg);
   background-size: cover;
   width: 25%;
   height: 14px;
   margin-bottom: 20px;
 }
-#footer > #texte_footer {
+#footer > #texte__footer {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-#footer > #texte_footer #ustensils, #footer > #texte_footer #hands {
+#footer > #texte__footer #ustensils, #footer > #texte__footer #hands {
   font-size: 12px;
 }
 #footer p {
@@ -319,7 +314,6 @@ a {
   margin-right: 3px;
 }
 
-/*======== agencement page menu français  ===========*/
 #back_arrow {
   position: relative;
   top: 20px;
@@ -332,11 +326,8 @@ a {
   box-shadow: 0px 7px 18px -14px;
   padding: 0px 15Px 0px 10px;
 }
-.contenu_menu:hover {
-  background: #99E2D0;
-}
 
-.texte_andprice {
+.texte_description {
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -351,7 +342,7 @@ a {
   margin-bottom: -10px;
 }
 
-.price {
+.texte_description_price {
   font-weight: 600;
 }
 
@@ -440,6 +431,139 @@ a {
   background-size: cover;
   width: 100%;
   height: 245px;
+}
+
+.parent__menu__E-P-D__Entrees .card {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parent__menu__E-P-D__Plats .card {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.parent__menu__E-P-D__Plats .card {
+  animation-delay: 500ms;
+}
+
+.parent__menu__E-P-D__Desserts .card {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+@keyframes appear {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.parent__menu__E-P-D__Desserts .card {
+  animation-delay: 1s;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgrey;
+  border-radius: 20px 20px;
+  height: fit-content;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 2000ms;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__text {
+  display: flex;
+  flex: 100%;
+  white-space: nowrap;
+  /* interdiction de passer à la ligne */
+  flex-direction: column;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: all 700ms;
+}
+.card__text__description {
+  flex: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card__text__description p {
+  margin-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  /* interdiction de passer à la ligne */
+}
+.card__text__description__ingredients {
+  text-overflow: ellipsis;
+}
+.card__text__description__price {
+  font-weight: bold;
+}
+.card__check {
+  flex: 0%;
+  color: #f6f6f6;
+  background: #99E2D0;
+  font-size: xx-large;
+  text-align: center;
+  height: 2.1em;
+  /* hauteur du parent */
+  line-height: 2.1em;
+  /* hauteur de ligne (identique) */
+  white-space: nowrap;
+  /* interdiction de passer à la ligne */
+  border-top-right-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+  transform: translateX(100px);
+  cursor: pointer;
+  transition: all 700ms;
+}
+.card:hover > .card__check {
+  flex: 25%;
+  transform: translateX(0px);
+  background: #99E2D0;
+  cursor: pointer;
+  color: #f6f6f6;
+}
+.card:hover > .card__text {
+  flex: 75%;
+}
+.card:hover .fa-check-circle {
+  transform: rotate(0deg);
+}
+
+.fa-check-circle {
+  transform: rotate(360deg);
+  transition: transform 700ms;
 }
 
 /*# sourceMappingURL=style.css.map */

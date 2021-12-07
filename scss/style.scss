@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
 /*============  ALL VARIABLE  =======*/
+$bg: #f6f6f6; // page bg
+$main_margin: 5vw; // sur toutes les pages
+$transitiontime: 700ms; // sur la transition du check
+$card_bg: white;
+$shadow: lightgrey; // shadow btn
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $color-icon:gray;
 $margin-modif: 0px 15px 0px 5px;
 $color-btn-mix: mix( $color-primary,$color-secondary,55% );
-/*==========  ALL MIXIN   ============*/
+// ALL MIXIN 
 @mixin texte-btn-custom {
     color: white;
     font-weight: 600;
@@ -59,6 +64,31 @@ $color-btn-mix: mix( $color-primary,$color-secondary,55% );
     width: 100%;
     height: 245px;
 }
+@mixin cardstyle {
+    background-color: $card_bg;
+    box-shadow: 2px 2px 2px $shadow;
+    border-radius: 20px 20px;
+    height: fit-content;
+  }
+  // mixin pour faire apparaitre les menus
+  @mixin card_appear {
+    & .card {
+      animation-name: appear;
+      animation-duration: 1000ms;
+      animation-fill-mode: backwards;
+    }
+    @keyframes appear {
+      from {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
 /*===========================*/
 body, html {
     margin: 0px;
@@ -70,7 +100,6 @@ p {
 a {
     @include href-modif;
 }
-/*=========== test ===============*/
 
 /*============= agencement de la partie header contenant le logo =================*/
 #logo {
@@ -182,7 +211,7 @@ a {
         margin-top: 25px;
     }
 }
-/*================== agencement du bloc des restaurants + images + textes =========================*/
+//agencement bloc restauration + img + entrees
 #container3 {
     background: #f2f2f2;
     height: 1200px;
@@ -218,7 +247,7 @@ a {
         }
     }
 }
-/*======= hearticon modif ===========*/
+// heart icon modification
 
 .fa-heart {
     font-size: 30px;
@@ -265,6 +294,7 @@ a {
         margin: 0px;
     }
 }
+// agencement page d'accueil img 
 #restau_img1 {
     background: url(../img/first.jpg);
     @include modif-img-homepage;
@@ -284,12 +314,12 @@ a {
      background-position: bottom;
      @include modif-img-homepage;
 }
- /*=============== agencement du footer + contact  ========================*/
+// agencement footer contact 
  #text_contact {
      color: white;
  }
  #footer {
-     &_logo {
+     &__logo {
         background: url(../img/logo_white\ .svg);
         background-size: cover;
         width: 25%;
@@ -298,7 +328,7 @@ a {
      }
     background: rgb(51, 51, 51);
     padding: 25px;
-    >#texte_footer {
+    >#texte__footer {
         display: flex;
         flex-direction: column;
         gap: 7px;
@@ -319,7 +349,7 @@ a {
 #hands {
     margin-right: 3px;
 }
-/*======== agencement page menu français  ===========*/
+// agencement des pages menu + texte + img  
 #back_arrow {
     position: relative;
     top: 20px;
@@ -330,11 +360,9 @@ a {
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 7px 18px -14px;
     padding: 0px 15Px 0px 10px;
-    &:hover {
-        background: $color-tertiary;
-    }
+  
 }
-.texte_andprice {
+.texte_description {
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -347,7 +375,7 @@ a {
     font-size: 19px;
     margin-bottom: -10px;
 }
-.price {
+.texte_description_price {
     font-weight: 600;
 }
 #container_globalmenu {
@@ -412,3 +440,95 @@ a {
     background: url(../img/second.jpg);
     @include img-header-menus;
 }
+// mise en place de l'animation pour  l'apparition des menus entrees + plats + desserts 
+
+.parent__menu__E-P-D__Entrees {
+    @include card_appear;
+  }
+  .parent__menu__E-P-D__Plats{
+    @include card_appear;
+    & .card {
+      animation-delay: 500ms;
+    }
+  }
+  .parent__menu__E-P-D__Desserts {
+    @include card_appear;
+    & .card {
+      animation-delay: 1s;
+    }
+  }
+
+// mise en place du nouveau menu : entrees + plats + desserts 
+.card {
+    @include cardstyle;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 2000ms;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &__text {
+      display: flex;
+      flex: 100%;
+      white-space: nowrap; /* interdiction de passer à la ligne */
+      flex-direction: column;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: all $transitiontime;
+      &__description {
+        flex: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & p {
+          margin-top: 2px;
+          overflow: hidden;
+          white-space: nowrap; /* interdiction de passer à la ligne */
+        }
+        &__ingredients {
+          text-overflow: ellipsis;
+        }
+        &__price {
+          font-weight: bold;
+        }
+      }
+    }
+    // check animation in .card 
+    &__check {
+      flex: 0%;
+      color: $bg;
+      // height: 100%;
+      background: $color-tertiary;
+      font-size: xx-large;
+      text-align: center;
+      // centrer verticalement sur une ligne:
+      height: 2.1em; /* hauteur du parent */
+      line-height: 2.1em; /* hauteur de ligne (identique) */
+      white-space: nowrap; /* interdiction de passer à la ligne */
+      border-top-right-radius: 20px 20px;
+      border-bottom-right-radius: 20px 20px;
+      transform: translateX(100px);
+      cursor: pointer;
+      transition: all $transitiontime;
+    }
+    &:hover > &__check {
+      flex: 25%;
+      transform: translateX(0px);
+      background: $color-tertiary;
+      cursor: pointer;
+      color: $bg;
+    }
+    &:hover > &__text {
+      flex: 75%;
+    }
+    &:hover .fa-check-circle {
+      transform: rotate(0deg);
+    }
+  }
+  // mise en place animation check validity sur le contenu des pages menus 
+.fa-check-circle {
+    transform: rotate(360deg);
+    transition: transform $transitiontime;
+  }
