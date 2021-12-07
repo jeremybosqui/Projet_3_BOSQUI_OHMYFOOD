@@ -3,7 +3,7 @@
 /*============  ALL VARIABLE  =======*/
 $bg: #f6f6f6; // page bg
 $main_margin: 5vw; // sur toutes les pages
-$transitiontime: 700ms; // sur la transition du check
+$transitiontime: 800ms; // sur la transition du check
 $card_bg: white;
 $shadow: lightgrey; // shadow btn
 $color-primary:#9356DC;
@@ -74,7 +74,7 @@ $color-btn-mix: mix( $color-primary,$color-secondary,55% );
 @mixin cardstyle {
     background-color: $card_bg;
     box-shadow: 2px 2px 2px $shadow;
-    border-radius: 20px 20px;
+    border-radius: 15px 15px;
     height: fit-content;
   }
   // mixin pour faire apparaitre les menus
@@ -449,22 +449,35 @@ a {
     @include img-header-menus;
 }
 // mise en place de l'animation pour  l'apparition des menus entrees + plats + desserts 
+#parent__menu {
+    & h3 {
+      padding-bottom: 0px;
+      margin: 0 $main_margin;
+    }
+    & p {
+      margin-bottom: 5px;
+      padding: 0.25rem $main_margin;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 0 0vw;
+    .parent__menu__E-P-D__Entrees {
+        @include card_appear;
+      }
+      .parent__menu__E-P-D__Plats{
+        @include card_appear;
+        & .card {
+          animation-delay: 500ms;
+        }
+      }
+      .parent__menu__E-P-D__Desserts {
+        @include card_appear;
+        & .card {
+          animation-delay: 1s;
+        }
+      }
+  }
 
-.parent__menu__E-P-D__Entrees {
-    @include card_appear;
-  }
-  .parent__menu__E-P-D__Plats{
-    @include card_appear;
-    & .card {
-      animation-delay: 500ms;
-    }
-  }
-  .parent__menu__E-P-D__Desserts {
-    @include card_appear;
-    & .card {
-      animation-delay: 1s;
-    }
-  }
 
 // mise en place du nouveau menu : entrees + plats + desserts 
 #parent__menu {
@@ -494,7 +507,7 @@ a {
   }
 .card {
     @include cardstyle;
-    margin: 1rem;
+    margin: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -540,21 +553,21 @@ a {
       height: 2.1em; /* hauteur du parent */
       line-height: 2.1em; /* hauteur de ligne (identique) */
       white-space: nowrap; /* interdiction de passer à la ligne */
-      border-top-right-radius: 20px 20px;
-      border-bottom-right-radius: 20px 20px;
+      border-top-right-radius: 15px 15px;
+      border-bottom-right-radius: 15px 15px;
       transform: translateX(100px);
       cursor: pointer;
       transition: all $transitiontime;
     }
     &:hover > &__check {
-      flex: 25%;
+      flex: 1%;
       transform: translateX(0px);
       background: $color-tertiary;
       cursor: pointer;
       color: $bg;
     }
     &:hover > &__text {
-      flex: 75%;
+      flex: 85%;
     }
     &:hover .fa-check-circle {
       transform: rotate(0deg);

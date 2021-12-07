@@ -434,7 +434,20 @@ a {
   height: 300px;
 }
 
-.parent__menu__E-P-D__Entrees .card {
+#parent__menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0vw;
+}
+#parent__menu h3 {
+  padding-bottom: 0px;
+  margin: 0 5vw;
+}
+#parent__menu p {
+  margin-bottom: 5px;
+  padding: 0.25rem 5vw;
+}
+#parent__menu .parent__menu__E-P-D__Entrees .card {
   animation-name: appear;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
@@ -449,8 +462,7 @@ a {
     transform: translateY(0);
   }
 }
-
-.parent__menu__E-P-D__Plats .card {
+#parent__menu .parent__menu__E-P-D__Plats .card {
   animation-name: appear;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
@@ -465,11 +477,10 @@ a {
     transform: translateY(0);
   }
 }
-.parent__menu__E-P-D__Plats .card {
+#parent__menu .parent__menu__E-P-D__Plats .card {
   animation-delay: 500ms;
 }
-
-.parent__menu__E-P-D__Desserts .card {
+#parent__menu .parent__menu__E-P-D__Desserts .card {
   animation-name: appear;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
@@ -484,7 +495,7 @@ a {
     transform: translateY(0);
   }
 }
-.parent__menu__E-P-D__Desserts .card {
+#parent__menu .parent__menu__E-P-D__Desserts .card {
   animation-delay: 1s;
 }
 
@@ -518,9 +529,9 @@ a {
 .card {
   background-color: white;
   box-shadow: 2px 2px 2px lightgrey;
-  border-radius: 20px 20px;
+  border-radius: 15px 15px;
   height: fit-content;
-  margin: 1rem;
+  margin: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -537,7 +548,7 @@ a {
   flex-direction: column;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: all 700ms;
+  transition: all 800ms;
 }
 .card__text__description {
   flex: 100%;
@@ -569,21 +580,21 @@ a {
   /* hauteur de ligne (identique) */
   white-space: nowrap;
   /* interdiction de passer à la ligne */
-  border-top-right-radius: 20px 20px;
-  border-bottom-right-radius: 20px 20px;
+  border-top-right-radius: 15px 15px;
+  border-bottom-right-radius: 15px 15px;
   transform: translateX(100px);
   cursor: pointer;
-  transition: all 700ms;
+  transition: all 800ms;
 }
 .card:hover > .card__check {
-  flex: 25%;
+  flex: 1%;
   transform: translateX(0px);
   background: #99E2D0;
   cursor: pointer;
   color: #f6f6f6;
 }
 .card:hover > .card__text {
-  flex: 75%;
+  flex: 85%;
 }
 .card:hover .fa-check-circle {
   transform: rotate(0deg);
@@ -591,7 +602,7 @@ a {
 
 .fa-check-circle {
   transform: rotate(360deg);
-  transition: transform 700ms;
+  transition: transform 800ms;
 }
 
 /*# sourceMappingURL=style.css.map */
