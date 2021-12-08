@@ -3,7 +3,7 @@
 /*============  ALL VARIABLE  =======*/
 $bg: #f6f6f6; // page bg
 $main_margin: 5vw; // sur toutes les pages
-$transitiontime: 800ms; // sur la transition du check
+$transitiontime: 700ms; // sur la transition du check
 $card_bg: white;
 $shadow: lightgrey; // shadow btn
 $color-primary:#9356DC;
@@ -451,12 +451,17 @@ a {
 // mise en place de l'animation pour  l'apparition des menus entrees + plats + desserts 
 #parent__menu {
     & h3 {
-      padding-bottom: 0px;
-      margin: 0 $main_margin;
+        font-family: 'Roboto', sans-serif;
+        padding: 15px 0px 10px 10px; 
+        margin: 0px;
+        font-size: larger;
+         // pour mettre trois points de suspension si c'est nécéssaire : 3 lignes CSS
+          white-space: nowrap; /* interdiction de passer à la ligne */
+         text-overflow: ellipsis;
+         overflow: hidden;
     }
     & p {
       margin-bottom: 5px;
-      padding: 0.25rem $main_margin;
     }
     display: flex;
     flex-direction: column;
@@ -507,7 +512,7 @@ a {
   }
 .card {
     @include cardstyle;
-    margin: 15px;
+    margin: 13px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -529,14 +534,17 @@ a {
         flex-direction: row;
         justify-content: space-between;
         & p {
-          margin-top: 2px;
+          margin: 5px 0px 0px 10px;
           overflow: hidden;
           white-space: nowrap; /* interdiction de passer à la ligne */
         }
         &__ingredients {
+            font-size: 15px;
           text-overflow: ellipsis;
+          font-weight: 300;
         }
         &__price {
+          padding: 0px 10px 0px 0px;
           font-weight: bold;
         }
       }
@@ -547,11 +555,11 @@ a {
       color: $bg;
       // height: 100%;
       background: $color-tertiary;
-      font-size: xx-large;
+      font-size: large;
       text-align: center;
       // centrer verticalement sur une ligne:
-      height: 2.1em; /* hauteur du parent */
-      line-height: 2.1em; /* hauteur de ligne (identique) */
+      height: 4.2em; /* hauteur du parent */
+      line-height: 4.4em; /* hauteur de ligne centré au milieu */
       white-space: nowrap; /* interdiction de passer à la ligne */
       border-top-right-radius: 15px 15px;
       border-bottom-right-radius: 15px 15px;
@@ -560,7 +568,7 @@ a {
       transition: all $transitiontime;
     }
     &:hover > &__check {
-      flex: 1%;
+      flex: 20%;
       transform: translateX(0px);
       background: $color-tertiary;
       cursor: pointer;

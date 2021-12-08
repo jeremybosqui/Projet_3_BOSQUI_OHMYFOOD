@@ -440,12 +440,17 @@ a {
   padding: 0 0vw;
 }
 #parent__menu h3 {
-  padding-bottom: 0px;
-  margin: 0 5vw;
+  font-family: "Roboto", sans-serif;
+  padding: 15px 0px 10px 10px;
+  margin: 0px;
+  font-size: larger;
+  white-space: nowrap;
+  /* interdiction de passer à la ligne */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 #parent__menu p {
   margin-bottom: 5px;
-  padding: 0.25rem 5vw;
 }
 #parent__menu .parent__menu__E-P-D__Entrees .card {
   animation-name: appear;
@@ -531,7 +536,7 @@ a {
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 15px 15px;
   height: fit-content;
-  margin: 15px;
+  margin: 13px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -548,7 +553,7 @@ a {
   flex-direction: column;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: all 800ms;
+  transition: all 700ms;
 }
 .card__text__description {
   flex: 100%;
@@ -557,37 +562,40 @@ a {
   justify-content: space-between;
 }
 .card__text__description p {
-  margin-top: 2px;
+  margin: 5px 0px 0px 10px;
   overflow: hidden;
   white-space: nowrap;
   /* interdiction de passer à la ligne */
 }
 .card__text__description__ingredients {
+  font-size: 15px;
   text-overflow: ellipsis;
+  font-weight: 300;
 }
 .card__text__description__price {
+  padding: 0px 10px 0px 0px;
   font-weight: bold;
 }
 .card__check {
   flex: 0%;
   color: #f6f6f6;
   background: #99E2D0;
-  font-size: xx-large;
+  font-size: large;
   text-align: center;
-  height: 2.1em;
+  height: 4.2em;
   /* hauteur du parent */
-  line-height: 2.1em;
-  /* hauteur de ligne (identique) */
+  line-height: 4.4em;
+  /* hauteur de ligne centré au milieu */
   white-space: nowrap;
   /* interdiction de passer à la ligne */
   border-top-right-radius: 15px 15px;
   border-bottom-right-radius: 15px 15px;
   transform: translateX(100px);
   cursor: pointer;
-  transition: all 800ms;
+  transition: all 700ms;
 }
 .card:hover > .card__check {
-  flex: 1%;
+  flex: 20%;
   transform: translateX(0px);
   background: #99E2D0;
   cursor: pointer;
@@ -602,7 +610,7 @@ a {
 
 .fa-check-circle {
   transform: rotate(360deg);
-  transition: transform 800ms;
+  transition: transform 700ms;
 }
 
 /*# sourceMappingURL=style.css.map */
