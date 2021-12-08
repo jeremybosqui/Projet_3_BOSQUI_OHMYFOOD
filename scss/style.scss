@@ -11,7 +11,7 @@ $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $color-icon:gray;
 $margin-modif: 0px 15px 0px 5px;
-$color-btn-mix: mix( $color-primary,$color-secondary,55% );
+$color-mix: mix( $color-primary,$color-secondary,40%);
 // ALL MIXIN 
 @mixin texte-btn-custom {
     color: white;
@@ -19,7 +19,7 @@ $color-btn-mix: mix( $color-primary,$color-secondary,55% );
     font-family: 'Roboto',sans-serif;
 }
 @mixin hover-btn {
-    background: lighten($color: $color-btn-mix, $amount: 3);
+    background: lighten($color: $color-mix, $amount: 3);
     box-shadow: 0px 2px 7px 0px;
 }
 @mixin num-modif {
@@ -110,17 +110,26 @@ a {
 }
 
 /*============= agencement de la partie header contenant le logo =================*/
-#logo {
-    background: url(../img/ohmyfood@2x.svg);
-    background-size: cover;
-    width: 43%;
-    height: 28px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-#container_logo {
+
+#container__logo {
     display: flex;
     justify-content: center;
+    &__back__arrow {
+        position: relative;
+        top: 20px;
+        right: 70px;
+     }
+     &__logo {
+        width: 162px;
+        &__img {
+            background: url(../img/ohmyfood@2x.svg);
+            background-size: cover;
+            width: 100%;
+            height: 28px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    }
 }
 /*=========== agencement localisation  =============*/
 #container_localisation {
@@ -136,7 +145,7 @@ a {
     >#bouton_explorer {
         padding: 15px;
         border-radius: 30px 30px 30px 30px;
-        background: $color-btn-mix;
+        background: $color-mix;
         box-shadow: 0px 5px 14px -7px;
         border: none;
         width: 215px;
@@ -274,7 +283,7 @@ a {
     left: 0;
     top: 0;
     z-index: -1;
-    background: linear-gradient($color-secondary, $color-primary);
+    background: $color-mix;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -289,7 +298,7 @@ a {
       opacity: 1;
     }
   
-    background: linear-gradient($color-secondary, $color-primary);
+    background: $color-mix;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -331,9 +340,13 @@ a {
      &__logo {
         background: url(../img/logo_white\ .svg);
         background-size: cover;
-        width: 25%;
+        width: 100%;
         height: 14px;
         margin-bottom: 20px;
+     }
+     &__div__img {
+        width: 80px;
+        height: 25px;
      }
     background: rgb(51, 51, 51);
     padding: 25px;
@@ -359,68 +372,11 @@ a {
     margin-right: 3px;
 }
 // agencement des pages menu + texte + img  
-#back_arrow {
-    position: relative;
-    top: 20px;
-    right: 70px;
- }
-.contenu_menu  {
-    background: white;
-    border-radius: 15px 15px 15px 15px;
-    box-shadow: 0px 7px 18px -14px;
-    padding: 0px 15Px 0px 10px;
-  
-}
-.texte_description {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 300px;
-    font-size: 15px;
-}
-.texte_gras {
-    font-weight: 600;
-    font-size: 19px;
-    margin-bottom: -10px;
-}
-.texte_description_price {
-    font-weight: 600;
-}
-#container_globalmenu {
-    background: #f2f2f2;
-    position: relative;
-    top: -70px;
-    z-index: 100;
-    margin-bottom: -70px;
-    border-radius: 40px 40px 0px 0px;
-}
-#bloc_entree, #bloc_plat, #bloc_dessert {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-#container_globalmenu h1 {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Shrikhand',sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    padding: 35px 35px 0px 25px;
-}
-#globalmenu {
-    margin: -30px 15px 0px 15px;
-}
-.mini_titreborder {
-    border-bottom: #99E2D0 3px solid;
-    padding: 0px 0px 5px 0px;
-    width: 40px;
-    margin: 45px 0px 0px 5px;
-}
+
 #bouton_commander {
     padding: 15px;
     border-radius: 25px 25px 25px 25px;
-    background: #c466db;
+    background: $color-mix;
     margin: 50px 0px 80px 0px;
     width: 190px;
     cursor: pointer;

@@ -12,11 +12,13 @@
 <body>
       <!--agencement du logo au milieu de la page d'accueil + retour vers la page index.html-->
         <header>
-           <div id="container_logo">
-                <div id="back_arrow">
+           <div id="container__logo">
+                <div id="container__logo__back__arrow">
                     <a href="index.html"><span><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a>
                 </div>
-                    <div id="logo"></div>
+                    <div id="container__logo__logo">
+                        <div id="container__logo__logo__img"></div>
+                    </div>
            </div>
         </header>
         <!--img restaurant-->
@@ -180,8 +182,12 @@
        </section>
            <!--début du footer-->
      <footer id="footer">
-            <a href="index.html"><div id="footer__logo"></div></a>
-        <div id="texte__footer">
+            <div id="footer__div__img">
+                <a href="index.html">
+                    <div id="footer__logo"></div>
+                </a>
+            </div>
+        <section id="texte__footer">
             <p>
                  <span id="ustensils"><i class="fas fa-utensils"></i></span> Proposer un restaurant  
              </p>
@@ -194,7 +200,7 @@
              <p>
                  <a id="text_contact" href="mailto:ohmyfoodf@gmail.com" target="blank">Contact</a> 
             </p>
-        </div>
+        </section>
     </footer>
 </body>
 </html>
