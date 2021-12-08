@@ -506,7 +506,7 @@ a {
   flex-direction: column;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: all 700ms;
+  transition: all 800ms;
 }
 .card__text__description {
   flex: 100%;
@@ -545,7 +545,7 @@ a {
   border-bottom-right-radius: 15px 15px;
   transform: translateX(100px);
   cursor: pointer;
-  transition: all 700ms;
+  transition: all 800ms;
 }
 .card:hover > .card__check {
   flex: 20%;
@@ -563,7 +563,7 @@ a {
 
 .fa-check-circle {
   transform: rotate(360deg);
-  transition: transform 700ms;
+  transition: transform 800ms;
 }
 
 /*# sourceMappingURL=style.css.map */
