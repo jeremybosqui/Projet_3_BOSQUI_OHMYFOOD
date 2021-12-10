@@ -137,13 +137,14 @@ a {
 //agencement bloc restauration + img + entrees
 #container3 {
     background: #f2f2f2;
-    height: 1200px;
+    height: 1095px;
     &_parent {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
         >.container3_enfants {
+            position: relative;
             box-shadow:  0px 2px 11px -6px;
             border-radius: 15px 15px 15px 15px;
             background: white;
@@ -215,7 +216,7 @@ a {
 /*=========================*/
 .nouveau {
     @include text-new;
-    left: 240px;
+    font-family: 'Roboto', sans-serif;
     p {
         margin: 0px;
     }
@@ -224,7 +225,6 @@ a {
 #restau_img1 {
     background: url(../img/first.jpg);
     @include modif-img-homepage;
-    height: 155px;
     background-position: bottom;
  }
  #restau_img2 {
@@ -317,8 +317,19 @@ a {
     background: url(../img/second.jpg);
     @include img-header-menus;
 }
-// mise en place de l'animation pour  l'apparition des menus entrees + plats + desserts 
+
 #parent__menu {
+    background: $bg;
+    & h2 {
+        @include border-bttm-title;
+        padding: 25px 0px 6px 0px;
+        border-bottom: 3px solid #99E2D0;
+        width: 38px;
+        margin-left: 20px;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
     & h3 {
         font-family: 'Roboto', sans-serif;
         padding: 15px 0px 10px 10px; 
@@ -329,7 +340,7 @@ a {
         text-overflow: ellipsis; /* ajout des pointilles pour masquer le reste du texte */
         overflow: hidden;
     }
-    display: flex;
+    display: flex; /*==== mise en place de l'animation pour  l'apparition des menus entrees + plats + desserts ===*/
     flex-direction: column;
     padding: 0 0vw;
     .parent__menu__E-P-D__Entrees {
@@ -351,19 +362,7 @@ a {
 
 
 // mise en place du nouveau menu : entrees + plats + desserts 
-#parent__menu {
-    background: $bg;
-    h2 {
-        @include border-bttm-title;
-        padding: 25px 0px 6px 0px;
-        border-bottom: 3px solid #99E2D0;
-        width: 38px;
-        margin-left: 20px;
-        font-family: "Roboto", sans-serif;
-        font-size: 15px;
-        font-weight: 400;
-    }
-}
+
 // agencment restaurant name 
 .restaurant {
     &__name {
@@ -465,14 +464,9 @@ a {
         background: red;
     }
     .nouveau {
-        left: 205px;
-        & p {
-            font-size: 13.5px;
-        }
+        font-size: 13.5px;
     }
-    #container3 {
-        height: 1095px;
-    }
+    
     #container__logo {
         &__back__arrow {
             right: 55px;
@@ -488,13 +482,80 @@ a {
     .heart {
         top: 2px;
     }
-
-
-
+    
 }
 
 
 // debut de la partie responsive en version desktop 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background: red;
+    }
+    #container3_parent {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 20px;
+    }
+    #container3 {
+        height: 655px;
+        &_parent {
+            >.container3_enfants {
+                width: 100%;
+            }
+        }
+    }
+    #parent__menu {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-bottom: 60px;
+        & h2 {
+            font-size: 20px;
+        }
+    }
+    .restaurant__name {
+        & h1 {
+            font-size: 35px;
+        }
+    }
+    .fa-heart {
+        font-size: 35px;
+    }
+    #bouton__commander {
+        margin: 135px 0px 75px 0px;
+        &__texte {
+            font-size: 20px;
+            font-weight: 900;
+        }
+    }
+    #container__logo {
+        &__logo {
+            &__img {
+                width: 136%;
+                height: 38px;
+            }
+        }
+    }
+    #footer {
+        &__logo {
+            width: 165%;
+            height: 22px;
+        }
+        &__div__img {
+            height: 35px;
+        }
+        & p {
+            font-size: 18px;
+        }
+    }
+    .fa-arrow-left {
+        font-size: 25px;
+    }
 
+
+
+
+
+
+}
 
 // debut de la partie responsive en version tablette 

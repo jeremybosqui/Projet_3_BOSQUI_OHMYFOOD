@@ -160,7 +160,7 @@ a {
 
 #container3 {
   background: #f2f2f2;
-  height: 1200px;
+  height: 1095px;
 }
 #container3_parent {
   display: flex;
@@ -169,6 +169,7 @@ a {
   gap: 20px;
 }
 #container3_parent > .container3_enfants {
+  position: relative;
   box-shadow: 0px 2px 11px -6px;
   border-radius: 15px 15px 15px 15px;
   background: white;
@@ -234,8 +235,9 @@ a {
 
 /*=========================*/
 .nouveau {
-  position: relative;
-  top: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   height: 15px;
   font-weight: 600;
   text-align: center;
@@ -244,7 +246,7 @@ a {
   color: #278870;
   background: #99e2c4;
   border-radius: 3px 3px 3px 3px;
-  left: 240px;
+  font-family: "Roboto", sans-serif;
 }
 .nouveau p {
   margin: 0px;
@@ -256,7 +258,6 @@ a {
   height: 145px;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
-  height: 155px;
   background-position: bottom;
 }
 
@@ -383,9 +384,24 @@ a {
 }
 
 #parent__menu {
+  background: #f6f6f6;
   display: flex;
+  /*==== mise en place de l'animation pour  l'apparition des menus entrees + plats + desserts ===*/
   flex-direction: column;
   padding: 0 0vw;
+}
+#parent__menu h2 {
+  padding: 25px 0px 6px 0px;
+  border-bottom: 3px solid #99E2D0;
+  width: 65px;
+  margin-left: 20px;
+  padding: 25px 0px 6px 0px;
+  border-bottom: 3px solid #99E2D0;
+  width: 38px;
+  margin-left: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 #parent__menu h3 {
   font-family: "Roboto", sans-serif;
@@ -448,23 +464,6 @@ a {
 }
 #parent__menu .parent__menu__E-P-D__Desserts .card {
   animation-delay: 1s;
-}
-
-#parent__menu {
-  background: #f6f6f6;
-}
-#parent__menu h2 {
-  padding: 25px 0px 6px 0px;
-  border-bottom: 3px solid #99E2D0;
-  width: 65px;
-  margin-left: 20px;
-  padding: 25px 0px 6px 0px;
-  border-bottom: 3px solid #99E2D0;
-  width: 38px;
-  margin-left: 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
 }
 
 .restaurant__name {
@@ -572,14 +571,7 @@ a {
   }
 
   .nouveau {
-    left: 205px;
-  }
-  .nouveau p {
     font-size: 13.5px;
-  }
-
-  #container3 {
-    height: 1095px;
   }
 
   #container__logo__back__arrow {
@@ -592,6 +584,69 @@ a {
 
   .heart {
     top: 2px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    background: red;
+  }
+
+  #container3_parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+  }
+
+  #container3 {
+    height: 655px;
+  }
+  #container3_parent > .container3_enfants {
+    width: 100%;
+  }
+
+  #parent__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 60px;
+  }
+  #parent__menu h2 {
+    font-size: 20px;
+  }
+
+  .restaurant__name h1 {
+    font-size: 35px;
+  }
+
+  .fa-heart {
+    font-size: 35px;
+  }
+
+  #bouton__commander {
+    margin: 135px 0px 75px 0px;
+  }
+  #bouton__commander__texte {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  #container__logo__logo__img {
+    width: 136%;
+    height: 38px;
+  }
+
+  #footer__logo {
+    width: 165%;
+    height: 22px;
+  }
+  #footer__div__img {
+    height: 35px;
+  }
+  #footer p {
+    font-size: 18px;
+  }
+
+  .fa-arrow-left {
+    font-size: 25px;
   }
 }
 
