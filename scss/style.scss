@@ -1,104 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
-@import "responsive.scss";
+@import "mixin.scss";
+@import "variable.scss";
 
-/*============  ALL VARIABLE  =======*/
-$bg: #f6f6f6; // page bg
-$main_margin: 5vw; // sur toutes les pages
-$transitiontime: 800ms; // sur la transition du check
-$card_bg: white;
-$shadow: lightgrey; // shadow btn
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-icon:gray;
-$margin-modif: 0px 15px 0px 5px;
-$color-mix: mix( $color-primary,$color-secondary,40%);
-// ALL MIXIN 
-@mixin texte-btn-custom {
-    color: white;
-    font-weight: 500;
-    font-family: 'Roboto',sans-serif;
-}
-@mixin hover-btn {
-    background: lighten($color: $color-mix, $amount: 3);
-    box-shadow: 0px 2px 7px 0px;
-}
-@mixin num-modif {
-    position: relative;
-    top: 4px;
-    left: 8px;
-    color: white;
-}
-@mixin dot-modif {
-    position: relative;
-    top: 20px;
-    left: -12px;
-}
-@mixin modif-img-homepage {
-    background-size: cover;
-    height: 170px;
-    width: 325px;
-    border-radius: 15px 15px 0px 0px;
-}
-@mixin text-new {
-    position: relative;
-    left: 225px;
-    height: 15px;
-    top: 15px;
-    font-weight: 600;
-    text-align: center;
-    width: 70px;
-    padding: 8px;
-    color: darken($color: $color-tertiary, $amount: 40);
-    background: adjust-hue($color: $color-tertiary, $degrees: -10);
-    border-radius: 3px 3px 3px 3px;
-}
-@mixin href-modif {
-    text-decoration: none;
-    color: black;
-    overflow: hidden;
-    cursor: pointer;
-}
-@mixin border-bttm-title {
-    padding: 25px 0px 6px 0px;
-    border-bottom: 3px solid $color-tertiary;
-    width: 65px;
-    margin-left: 20px;
-}
-@mixin img-header-menus {
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 275px;
-    box-shadow: inset #00000040 0px 2px 5px 0px;
-}
-// mixin pour modifier les cards et creer les contours
-@mixin cardstyle {
-    background-color: $card_bg;
-    box-shadow: 2px 2px 2px $shadow;
-    border-radius: 15px 15px;
-    height: fit-content;
-  }
-  // mixin pour faire apparaitre les menus
-  @mixin card_appear {
-    & .card {
-      animation-name: appear;
-      animation-duration: 1000ms;
-      animation-fill-mode: backwards;
-    }
-    @keyframes appear {
-      from {
-        transform: translateY(-100px);
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
-  
 /*===========================*/
 body, html {
     margin: 0px;
@@ -144,7 +48,7 @@ a {
 #bouton{
     display: flex;
     justify-content: center;
-    >#bouton_explorer {
+    &__explorer {
         padding: 15px;
         border-radius: 30px 30px 30px 30px;
         background: $color-mix;
@@ -155,7 +59,7 @@ a {
         &:hover {
             @include hover-btn;
         }
-        >#texte_explorer {
+        &__texte {
            @include texte-btn-custom;
         }
     }
@@ -220,7 +124,7 @@ a {
 }
 .nav_fonctionnement {
     border-radius: 15px 15px 15px 15px;
-    width: 325px;
+    width: 90%;
     height: 65px;
     display: flex;
     background: #f2f2f2;
@@ -243,6 +147,7 @@ a {
             box-shadow:  0px 2px 11px -6px;
             border-radius: 15px 15px 15px 15px;
             background: white;
+            width: 90%;
         }
     }
 }
@@ -310,6 +215,7 @@ a {
 /*=========================*/
 .nouveau {
     @include text-new;
+    left: 240px;
     p {
         margin: 0px;
     }
@@ -318,15 +224,17 @@ a {
 #restau_img1 {
     background: url(../img/first.jpg);
     @include modif-img-homepage;
+    height: 155px;
+    background-position: bottom;
  }
  #restau_img2 {
     background: url(../img/second.jpg);
-    background-position: center;
+    background-position: 0px -130px;
     @include modif-img-homepage;
  }
  #restau_img3 {
     background: url(../img/third.jpg);
-    background-position: bottom;
+    background-position: 0px -46px;
     @include modif-img-homepage;
  }
 #restau_img4 {
@@ -335,9 +243,7 @@ a {
      @include modif-img-homepage;
 }
 // agencement footer contact 
- #text_contact {
-     color: white;
- }
+ 
  #footer {
      &__logo {
         background: url(../img/logo_white\ .svg);
@@ -359,6 +265,9 @@ a {
         #ustensils, #hands {
             font-size: 12px;
         }
+        &__contact {
+            color: white;
+        }
      }
     &__ustensils {
         margin: 0px 6px 0px 3px;
@@ -376,7 +285,7 @@ a {
 
 // agencement des pages menu + texte + img  
 
-#bouton_commander {
+#bouton__commander {
     padding: 15px;
     border-radius: 25px 25px 25px 25px;
     background: $color-mix;
@@ -388,7 +297,7 @@ a {
     &:hover {
         @include hover-btn;
     }
-    >#texte_commander {
+    &__texte {
         @include texte-btn-custom;
     }
 }
@@ -469,7 +378,7 @@ a {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      h1 {
+      & h1 {
           font-weight: 300
       }
     }
@@ -550,6 +459,41 @@ a {
     transform: rotate(360deg);
     transition: transform $transitiontime;
   }
+// responsive mobile 
+@media screen and (max-width: 374px) {
+    body {
+        background: red;
+    }
+    .nouveau {
+        left: 205px;
+        & p {
+            font-size: 13.5px;
+        }
+    }
+    #container3 {
+        height: 1095px;
+    }
+    #container__logo {
+        &__back__arrow {
+            right: 55px;
+        }
+    }
+    .restaurant {
+        &__name {
+            & h1 {
+                font-size: 23px;
+            }
+        }
+    }
+    .heart {
+        top: 2px;
+    }
+
+
+
+}
+
+
 // debut de la partie responsive en version desktop 
 
 

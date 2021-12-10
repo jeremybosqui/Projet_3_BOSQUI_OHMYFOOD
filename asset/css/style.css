@@ -1,11 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
-@media screen and (min-width: 1300px) {
-  body {
-    background: black;
-  }
-}
 /*============  ALL VARIABLE  =======*/
 /*===========================*/
 body, html {
@@ -59,7 +54,7 @@ a {
   display: flex;
   justify-content: center;
 }
-#bouton > #bouton_explorer {
+#bouton__explorer {
   padding: 15px;
   border-radius: 30px 30px 30px 30px;
   background: #d46bdb;
@@ -68,11 +63,11 @@ a {
   width: 215px;
   cursor: pointer;
 }
-#bouton > #bouton_explorer:hover {
+#bouton__explorer:hover {
   background: #d877de;
   box-shadow: 0px 2px 7px 0px;
 }
-#bouton > #bouton_explorer > #texte_explorer {
+#bouton__explorer__texte {
   color: white;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
@@ -152,7 +147,7 @@ a {
 
 .nav_fonctionnement {
   border-radius: 15px 15px 15px 15px;
-  width: 325px;
+  width: 90%;
   height: 65px;
   display: flex;
   background: #f2f2f2;
@@ -177,6 +172,7 @@ a {
   box-shadow: 0px 2px 11px -6px;
   border-radius: 15px 15px 15px 15px;
   background: white;
+  width: 90%;
 }
 
 #restau_title2 {
@@ -239,16 +235,16 @@ a {
 /*=========================*/
 .nouveau {
   position: relative;
-  left: 225px;
-  height: 15px;
   top: 15px;
+  height: 15px;
   font-weight: 600;
   text-align: center;
-  width: 70px;
+  width: 20%;
   padding: 8px;
   color: #278870;
   background: #99e2c4;
   border-radius: 3px 3px 3px 3px;
+  left: 240px;
 }
 .nouveau p {
   margin: 0px;
@@ -257,26 +253,28 @@ a {
 #restau_img1 {
   background: url(../img/first.jpg);
   background-size: cover;
-  height: 170px;
-  width: 325px;
+  height: 145px;
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
+  height: 155px;
+  background-position: bottom;
 }
 
 #restau_img2 {
   background: url(../img/second.jpg);
-  background-position: center;
+  background-position: 0px -130px;
   background-size: cover;
-  height: 170px;
-  width: 325px;
+  height: 145px;
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
 
 #restau_img3 {
   background: url(../img/third.jpg);
-  background-position: bottom;
+  background-position: 0px -46px;
   background-size: cover;
-  height: 170px;
-  width: 325px;
+  height: 145px;
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
 
@@ -284,13 +282,9 @@ a {
   background: url(../img/fourth.jpg);
   background-position: bottom;
   background-size: cover;
-  height: 170px;
-  width: 325px;
+  height: 145px;
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
-}
-
-#text_contact {
-  color: white;
 }
 
 #footer {
@@ -316,6 +310,9 @@ a {
 #footer__texte #ustensils, #footer__texte #hands {
   font-size: 12px;
 }
+#footer__texte__contact {
+  color: white;
+}
 #footer__ustensils {
   margin: 0px 6px 0px 3px;
 }
@@ -329,7 +326,7 @@ a {
   font-weight: 500;
 }
 
-#bouton_commander {
+#bouton__commander {
   padding: 15px;
   border-radius: 25px 25px 25px 25px;
   background: #d46bdb;
@@ -339,11 +336,11 @@ a {
   border: none;
   box-shadow: 0px 5px 14px -7px;
 }
-#bouton_commander:hover {
+#bouton__commander:hover {
   background: #d877de;
   box-shadow: 0px 2px 7px 0px;
 }
-#bouton_commander > #texte_commander {
+#bouton__commander__texte {
   color: white;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
@@ -567,6 +564,35 @@ a {
 .fa-check-circle {
   transform: rotate(360deg);
   transition: transform 800ms;
+}
+
+@media screen and (max-width: 374px) {
+  body {
+    background: red;
+  }
+
+  .nouveau {
+    left: 205px;
+  }
+  .nouveau p {
+    font-size: 13.5px;
+  }
+
+  #container3 {
+    height: 1095px;
+  }
+
+  #container__logo__back__arrow {
+    right: 55px;
+  }
+
+  .restaurant__name h1 {
+    font-size: 23px;
+  }
+
+  .heart {
+    top: 2px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
