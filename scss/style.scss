@@ -50,7 +50,7 @@ a {
     justify-content: center;
     &__explorer {
         padding: 15px;
-        border-radius: 30px 30px 30px 30px;
+        border-radius: 30px;
         background: $color-mix;
         box-shadow: 0px 5px 14px -7px;
         border: none;
@@ -287,7 +287,7 @@ a {
 
 #bouton__commander {
     padding: 15px;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px;
     background: $color-mix;
     margin: 50px 0px 80px 0px;
     width: 190px;
@@ -529,9 +529,9 @@ a {
     }
     #container__logo {
         &__logo {
+            width: 203px;
             &__img {
-                width: 136%;
-                height: 38px;
+                height: 35px;
             }
         }
     }
@@ -548,10 +548,37 @@ a {
         }
     }
     .fa-arrow-left {
-        font-size: 25px;
+        font-size: 22px;
     }
-
-
+    #container2_fonctionnement {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 15px;
+    }
+    #container2 {
+        height: 200px;
+    }
+    #icon_mobile, 
+    #icon_list, 
+    #icon_store  {
+        margin: 0px 5px 0px 0px;
+    }
+    .nav_fonctionnement {
+        width: 100%;
+        & p {
+            font-weight: 600;
+        }
+    }
+    #bouton {
+        &__explorer {
+            border-radius: 15px;
+            width: 260px;
+            padding: 20px;
+            &__texte {
+                font-weight: 900;
+            }
+        }
+    }
 
 
 
