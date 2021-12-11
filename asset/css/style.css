@@ -840,7 +840,6 @@ a {
   }
 
   #bouton__commander {
-    transform: translateX(380px);
     margin: 65px 0px 75px 0px;
   }
   #bouton__commander__texte {
