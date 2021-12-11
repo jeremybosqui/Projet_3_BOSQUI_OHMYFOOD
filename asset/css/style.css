@@ -638,7 +638,7 @@ a {
   }
 
   .restaurant__name h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .fa-heart {
@@ -653,22 +653,17 @@ a {
     font-weight: 900;
   }
 
-  #container__logo__logo {
-    width: 203px;
+  #footer__div__img {
+    width: 115px;
+    height: 45px;
   }
-  #container__logo__logo__img {
-    height: 35px;
-  }
-
   #footer__logo {
-    width: 165%;
+    width: 110%;
     height: 22px;
   }
-  #footer__div__img {
-    height: 35px;
-  }
+
   #footer p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .fa-arrow-left {
@@ -821,6 +816,36 @@ a {
   #parent__menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  #container2_fonctionnement {
+    gap: 30px;
+  }
+
+  .parent__menu__E-P-D__Entrees,
+.parent__menu__E-P-D__Plats,
+.parent__menu__E-P-D__Desserts {
+    width: 82%;
+  }
+
+  .fa-arrow-left {
+    font-size: 22px;
+  }
+
+  #img1_globalmenu,
+#img2_globalmenu,
+#img3_globalmenu,
+#img4_globalmenu {
+    height: 450px;
+  }
+
+  #bouton__commander {
+    transform: translateX(380px);
+    margin: 65px 0px 75px 0px;
+  }
+  #bouton__commander__texte {
+    font-size: 20px;
+    font-weight: 900;
   }
 }
 
