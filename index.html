@@ -11,6 +11,11 @@
 </head>
 <body>
     <!--agencement du logo au milieu de la page d'accueil-->
+    
+    <div id="loader">
+        <div id="loader__animation"></div>
+      </div> 
+    
     <header>
         <div id="container__logo">
                  <a href="index.html">
@@ -20,151 +25,153 @@
                  </a>
         </div>
     </header>    
-    <!--localisation-->
-    <div id="container_localisation">
-        <div id="localisation">
-            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Paris, Belleville</p>
-        </div>
-    </div>
-    <!--reservation menu-->
-    <div id="container1">
-        <div id="container1_reservation">
-            <p id="faux_titre">Réservez le menu qui <br> vous convient</p>
-            <p>Découvrez des restaurants d'exception, <br id="saut_ligne"> séléctionés par nos soins.</p>
-            <div id="bouton">
-                <button id="bouton__explorer">
-                    <span id="bouton__explorer__texte">Explorer nos restaurants</span>
-                </button>
+   <main>
+            <!--localisation-->
+        <div id="container_localisation">
+            <div id="localisation">
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Paris, Belleville</p>
             </div>
         </div>
-    </div>
-    <!--agencement du bloc fonctionnement-->
-    <div id="container2">
-        <p id="container2_title">Fonctionnement</p>
-        <div id="container2_fonctionnement">
-            <div class="nav_fonctionnement">
-                <span id="dot1" class="dot">
-                  <span id="num_1">1</span>
-                </span>
-                <p>
-                  <span id="icon_mobile">
-                      <i class="fa fa-mobile" aria-hidden="true"></i>
-                    </span> 
-                    Choisissez un restaurant 
-                </p>
-            </div>
-            <div class="nav_fonctionnement">
-                <span id="dot2" class="dot">
-                    <span id="num_2">2</span>
-                </span>
-                <p>
-                    <span id="icon_list">
-                        <i class="fa fa-list" aria-hidden="true"></i> 
-                    </span>
-                    Composez votre menu 
-                </p>
-            </div>
-            <div class="nav_fonctionnement">
-                <span id="dot3" class="dot">
-                    <span id="num_3">3</span>
-                </span>
-                <p>
-                    <span id="icon_store">
-                        <i class="fas fa-store"></i> 
-                    </span>
-                    Dégustez au restaurant 
-                </p>
-            </div>
-        </div> 
-    </div>
-    <!--test-->
-    
-    <!--début de la partie contenant les cards restau-->
-    
-    <div id="container3">
-        <p id="restau_title2">Restaurants</p>
-        <div id="container3_parent">
-            <div class="container3_enfants">
-              <a href="La_palette_du_goût.html">
-                <div id="restau_img1">
-                    <span class="nouveau">
-                        Nouveau
-                    </span>
+        <!--reservation menu-->
+        <div id="container1">
+            <div id="container1_reservation">
+                <p id="faux_titre">Réservez le menu qui <br> vous convient</p>
+                <p>Découvrez des restaurants d'exception, <br id="saut_ligne"> séléctionés par nos soins.</p>
+                <div id="bouton">
+                    <button id="bouton__explorer">
+                        <span id="bouton__explorer__texte">Explorer nos restaurants</span>
+                    </button>
                 </div>
-              </a>
-                <div class="restau_text">
-                    <p class="texte_gras2">
-                       <a href="La_palette_du_goût.html">
-                        La palette du goût
-                       </a>
-                       <i class="far fa-heart heart">
-                        <i class="fas fa-heart heart-color"></i>  
-                      </i>
+            </div>
+        </div>
+        <!--agencement du bloc fonctionnement-->
+        <div id="container2">
+            <p id="container2_title">Fonctionnement</p>
+            <div id="container2_fonctionnement">
+                <div class="nav_fonctionnement">
+                    <span id="dot1" class="dot">
+                    <span id="num_1">1</span>
+                    </span>
+                    <p>
+                    <span id="icon_mobile">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        </span> 
+                        Choisissez un restaurant 
                     </p>
-                        <p>
-                            <a href="La_palette_du_goût.html"> Ménilmontant </a>
-                        </p>
                 </div>
-            </div>
-            <div class="container3_enfants">
-                <a href="La_note_enchantee.html">
-                    <div id="restau_img2">
+                <div class="nav_fonctionnement">
+                    <span id="dot2" class="dot">
+                        <span id="num_2">2</span>
+                    </span>
+                    <p>
+                        <span id="icon_list">
+                            <i class="fa fa-list" aria-hidden="true"></i> 
+                        </span>
+                        Composez votre menu 
+                    </p>
+                </div>
+                <div class="nav_fonctionnement">
+                    <span id="dot3" class="dot">
+                        <span id="num_3">3</span>
+                    </span>
+                    <p>
+                        <span id="icon_store">
+                            <i class="fas fa-store"></i> 
+                        </span>
+                        Dégustez au restaurant 
+                    </p>
+                </div>
+            </div> 
+        </div>
+        <!--test-->
+        
+        <!--début de la partie contenant les cards restau-->
+        
+        <div id="container3">
+            <p id="restau_title2">Restaurants</p>
+            <div id="container3_parent">
+                <div class="container3_enfants">
+                <a href="La_palette_du_goût.html">
+                    <div id="restau_img1">
                         <span class="nouveau">
                             Nouveau
                         </span>
                     </div>
                 </a>
-                <div class="restau_text">
-                    <p class="texte_gras2"> 
-                        <a href="La_note_enchantee.html">
-                            La note enchantée 
+                    <div class="restau_text">
+                        <p class="texte_gras2">
+                        <a href="La_palette_du_goût.html">
+                            La palette du goût
                         </a>
                         <i class="far fa-heart heart">
                             <i class="fas fa-heart heart-color"></i>  
-                          </i>
-                    </p>
-                        <p>
-                            <a href="La_note_enchantee.html">Charonne </a>
+                        </i>
                         </p>
+                            <p>
+                                <a href="La_palette_du_goût.html"> Ménilmontant </a>
+                            </p>
+                    </div>
                 </div>
-            </div>
-            <div class="container3_enfants">
-                <a href="A_la_française.html"><div id="restau_img3"></div> </a>
+                <div class="container3_enfants">
+                    <a href="La_note_enchantee.html">
+                        <div id="restau_img2">
+                            <span class="nouveau">
+                                Nouveau
+                            </span>
+                        </div>
+                    </a>
+                    <div class="restau_text">
+                        <p class="texte_gras2"> 
+                            <a href="La_note_enchantee.html">
+                                La note enchantée 
+                            </a>
+                            <i class="far fa-heart heart">
+                                <i class="fas fa-heart heart-color"></i>  
+                            </i>
+                        </p>
+                            <p>
+                                <a href="La_note_enchantee.html">Charonne </a>
+                            </p>
+                    </div>
+                </div>
+                <div class="container3_enfants">
+                    <a href="A_la_française.html"><div id="restau_img3"></div> </a>
+                    <div class="restau_text">
+                        <p class="texte_gras2">
+                        <a href="A_la_française.html"> À la française </a>
+                        <i class="far fa-heart heart">
+                            <i class="fas fa-heart heart-color"></i>  
+                        </i>
+                        </p>
+                            <p>
+                                <a href="A_la_française.html">Cité Rouge </a>
+                            </p>
+                    </div>
+                </div>
+                <div class="container3_enfants">
+                <a href="Le_delice_des_sens.html">
+                    <div id="restau_img4"></div>
+                </a>
                 <div class="restau_text">
                     <p class="texte_gras2">
-                       <a href="A_la_française.html"> À la française </a>
-                       <i class="far fa-heart heart">
-                        <i class="fas fa-heart heart-color"></i>  
-                      </i>
+                        <a href="Le_delice_des_sens.html">
+                            Le délice des sens
+                        </a> 
+                        <i class="far fa-heart heart">
+                            <i class="fas fa-heart heart-color"></i>  
+                        </i>
                     </p>
                         <p>
-                            <a href="A_la_française.html">Cité Rouge </a>
+                            <a href="Le_delice_des_sens.html">Folie-Méricourt  </a> 
                         </p>
+                </div>  
                 </div>
             </div>
-            <div class="container3_enfants">
-              <a href="Le_delice_des_sens.html">
-                <div id="restau_img4"></div>
-              </a>
-              <div class="restau_text">
-                <p class="texte_gras2">
-                    <a href="Le_delice_des_sens.html">
-                        Le délice des sens
-                    </a> 
-                    <i class="far fa-heart heart">
-                        <i class="fas fa-heart heart-color"></i>  
-                      </i>
-                </p>
-                    <p>
-                        <a href="Le_delice_des_sens.html">Folie-Méricourt  </a> 
-                    </p>
-            </div>  
-            </div>
         </div>
-    </div>
-    <!--
-        fin du bloc contenant les cards du restau
-    -->
+        <!--
+            fin du bloc contenant les cards du restau
+        -->
+   </main>
 
     <!--début du footer-->
     <footer id="footer">
