@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
 @import "mixin.scss";
 @import "variable.scss";
-
+@import "loader.scss";
 /*===========================*/
 body, html {
     margin: 0px;
@@ -14,7 +14,9 @@ p {
 a {
     @include href-modif;
 }
-
+#saut_ligne {
+    display: none;
+}
 /*============= agencement de la partie header contenant le logo =================*/
 
 #container__logo {
@@ -595,3 +597,104 @@ a {
 }
 
 // debut de la partie responsive en version desktop
+@media screen and (min-width: 1025px) {
+    
+    #container3_parent {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 20px;
+    }
+    #container3 {
+        height: 920px;
+        &_parent {
+            gap: 30px;
+            >.container3_enfants {
+                width: 100%;
+            }
+        }
+    }
+    #restau_img1,
+    #restau_img2,
+    #restau_img3,
+    #restau_img4 {
+        height: 250px;
+    }
+    // modif dot dans la partie fonctionnement 
+    #dot1, #dot2, #dot3 {
+        position: relative;
+        top: -13px;
+        left: 285px;
+    }
+    .nav_fonctionnement {
+        width: 600px;
+        & p {
+            font-size: 21px;
+            font-weight: 300;
+            margin-top: 24px;     
+            margin-left: 130px;
+        }
+    }
+    .dot {
+        height: 30px;
+        width: 30px;
+    }
+    #num_1, 
+    #num_2,
+    #num_3 {
+        top: 0px;
+        left: 8px;
+        font-size: 25px;
+    }
+
+    #container2_title,
+    #restau_title2,
+    #faux_titre
+     {
+        font-size: 25px;
+    }
+    
+    #saut_ligne {
+        display: block;
+    }
+
+    #bouton {
+        &__explorer {
+            border-radius: 15px;
+            width: 260px;
+            padding: 20px;
+            &__texte {
+                font-weight: 900;
+            }
+        }
+    }
+    .restau_text p {
+        font-size: 20px;
+    }
+    #footer {
+        &__div__img {
+        width: 115px;
+        height: 45px;
+    }
+        &__logo {
+            width: 110%;
+            height: 22px;
+        }
+
+    }
+    #footer p {
+        font-size: 16px;
+    }
+    .fa-heart {
+        font-size: 30px;
+    }
+    .nouveau {
+        padding: 10px;
+        font-size: 20px;
+        height: 20px;
+    }
+    #parent__menu {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}

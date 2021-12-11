@@ -2,6 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 /*============  ALL VARIABLE  =======*/
+/* body,
+header,
+footer {
+  animation-name: opacity;
+  // animation-direction: normal;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+ */
 /*===========================*/
 body, html {
   margin: 0px;
@@ -17,6 +37,10 @@ a {
   color: black;
   overflow: hidden;
   cursor: pointer;
+}
+
+#saut_ligne {
+  display: none;
 }
 
 /*============= agencement de la partie header contenant le logo =================*/
@@ -693,6 +717,110 @@ a {
     height: 275px;
     box-shadow: inset #00000040 0px 2px 5px 0px;
     height: 450px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #container3_parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+  }
+
+  #container3 {
+    height: 920px;
+  }
+  #container3_parent {
+    gap: 30px;
+  }
+  #container3_parent > .container3_enfants {
+    width: 100%;
+  }
+
+  #restau_img1,
+#restau_img2,
+#restau_img3,
+#restau_img4 {
+    height: 250px;
+  }
+
+  #dot1, #dot2, #dot3 {
+    position: relative;
+    top: -13px;
+    left: 285px;
+  }
+
+  .nav_fonctionnement {
+    width: 600px;
+  }
+  .nav_fonctionnement p {
+    font-size: 21px;
+    font-weight: 300;
+    margin-top: 24px;
+    margin-left: 130px;
+  }
+
+  .dot {
+    height: 30px;
+    width: 30px;
+  }
+
+  #num_1,
+#num_2,
+#num_3 {
+    top: 0px;
+    left: 8px;
+    font-size: 25px;
+  }
+
+  #container2_title,
+#restau_title2,
+#faux_titre {
+    font-size: 25px;
+  }
+
+  #saut_ligne {
+    display: block;
+  }
+
+  #bouton__explorer {
+    border-radius: 15px;
+    width: 260px;
+    padding: 20px;
+  }
+  #bouton__explorer__texte {
+    font-weight: 900;
+  }
+
+  .restau_text p {
+    font-size: 20px;
+  }
+
+  #footer__div__img {
+    width: 115px;
+    height: 45px;
+  }
+  #footer__logo {
+    width: 110%;
+    height: 22px;
+  }
+
+  #footer p {
+    font-size: 16px;
+  }
+
+  .fa-heart {
+    font-size: 30px;
+  }
+
+  .nouveau {
+    padding: 10px;
+    font-size: 20px;
+    height: 20px;
+  }
+
+  #parent__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

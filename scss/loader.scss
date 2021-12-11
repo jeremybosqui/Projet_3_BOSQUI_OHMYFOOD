@@ -1,0 +1,20 @@
+/* body,
+header,
+footer {
+  animation-name: opacity;
+  // animation-direction: normal;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+ */
