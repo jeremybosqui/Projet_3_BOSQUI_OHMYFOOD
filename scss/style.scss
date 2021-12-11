@@ -225,7 +225,7 @@ a {
 #restau_img1 {
     background: url(../img/first.jpg);
     @include modif-img-homepage;
-    background-position: bottom;
+    background-position: center;
  }
  #restau_img2 {
     background: url(../img/second.jpg);
@@ -461,7 +461,7 @@ a {
 // responsive mobile 
 @media screen and (max-width: 374px) {
     body {
-        background: red;
+        background: green;
     }
     .nouveau {
         font-size: 13.5px;
@@ -486,8 +486,8 @@ a {
 }
 
 
-// debut de la partie responsive en version desktop 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+// debut de la partie responsive en version tablette
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
         background: red;
     }
@@ -566,7 +566,7 @@ a {
     .nav_fonctionnement {
         width: 100%;
         & p {
-            font-weight: 600;
+            font-weight: 500;
         }
     }
     #bouton {
@@ -579,10 +579,19 @@ a {
             }
         }
     }
+    #img1_globalmenu,
+    #img2_globalmenu,
+    #img3_globalmenu,
+    #img4_globalmenu {
+        @include img-header-menus;
+        height: 450px;
+    }
+
+
 
 
 
 
 }
 
-// debut de la partie responsive en version tablette 
+// debut de la partie responsive en version desktop

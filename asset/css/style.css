@@ -258,7 +258,7 @@ a {
   height: 145px;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
-  background-position: bottom;
+  background-position: center;
 }
 
 #restau_img2 {
@@ -567,7 +567,7 @@ a {
 
 @media screen and (max-width: 374px) {
   body {
-    background: red;
+    background: green;
   }
 
   .nouveau {
@@ -586,7 +586,7 @@ a {
     top: 2px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     background: red;
   }
@@ -671,7 +671,7 @@ a {
     width: 100%;
   }
   .nav_fonctionnement p {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   #bouton__explorer {
@@ -681,6 +681,18 @@ a {
   }
   #bouton__explorer__texte {
     font-weight: 900;
+  }
+
+  #img1_globalmenu,
+#img2_globalmenu,
+#img3_globalmenu,
+#img4_globalmenu {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 275px;
+    box-shadow: inset #00000040 0px 2px 5px 0px;
+    height: 450px;
   }
 }
 
