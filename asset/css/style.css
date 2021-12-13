@@ -2,26 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 /*============  ALL VARIABLE  =======*/
-/* body,
-header,
-footer {
-  animation-name: opacity;
-  // animation-direction: normal;
-  animation-duration: 2500ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
-}
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
- */
 header,
 main,
 footer {
@@ -41,58 +21,59 @@ footer {
     opacity: 1;
   }
 }
-#loader__animation {
-  width: 180px;
-  height: 180px;
-  border: 10px solid #cccccc;
-  border-radius: 50%;
-  animation-name: spin;
-  animation-duration: 2.2s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
-  animation-fill-mode: forwards;
-  position: absolute;
-  margin: auto auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  box-shadow: 5px 10px #99E2D0, 60px -16px lightgrey;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    border-top: 30px solid #9356DC;
-    opacity: 1;
-    box-shadow: 5px 40px #99E2D0, 60px -16px lightgrey;
-  }
-  50% {
-    transform: rotate(360deg);
-    border-top: 40px solid #FF79DA;
-    opacity: 0.95;
-    box-shadow: 15px 10px #99E2D0, 20px -16px lightgrey;
-    border-radius: 50%;
-  }
-  74% {
-    border-radius: 30%;
-  }
-  75% {
-    transform: rotate(540deg);
-    opacity: 0.9;
-    box-shadow: 5px 10px #99E2D0, -20px 16px lightgrey;
-  }
-  85% {
-    border-radius: 50%;
-  }
-  100% {
-    border-radius: 50%;
-    transform: rotate(720deg);
-    border-top: 50px solid #9356DC;
-    opacity: 0;
-    box-shadow: 25px 35px #99E2D0, 10px 26px lightgrey;
-  }
-}
+/*======  
+ #loader__animation {
+   width: 180px;
+   height: 180px;
+   border: 10px solid #cccccc;
+   border-radius: 50%;
+   animation-name: spin;
+   animation-duration: 2.2s;
+   animation-iteration-count: 1;
+   animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
+   animation-fill-mode: forwards;
+   position: absolute;
+   margin: auto auto;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   box-shadow: 5px 10px $color-tertiary, 60px -16px $shadow;
+ }
+ @keyframes spin {
+   0% {
+     transform: rotate(0deg);
+     border-top: 30px solid $color-primary;
+     opacity: 1;
+     box-shadow: 5px 40px $color-tertiary, 60px -16px $shadow;
+   }
+   50% {
+     transform: rotate(360deg);
+     border-top: 40px solid $color-secondary;
+     opacity: 0.95;
+     box-shadow: 15px 10px $color-tertiary, 20px -16px $shadow;
+     border-radius: 50%;
+   }
+   74% {
+     border-radius: 30%;
+   }
+   75% {
+     transform: rotate(540deg);
+     opacity: 0.9;
+     box-shadow: 5px 10px $color-tertiary, -20px 16px $shadow;
+   }
+   85% {
+     border-radius: 50%;
+   }
+   100% {
+     border-radius: 50%;
+     transform: rotate(720deg);
+     border-top: 50px solid $color-primary;
+     opacity: 0;
+     box-shadow: 25px 35px $color-tertiary, 10px 26px $shadow;
+   }
+ }  
+ =======*/
 /*===========================*/
 body, html {
   margin: 0px;
@@ -819,7 +800,7 @@ a {
     width: 600px;
   }
   .nav_fonctionnement p {
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 300;
     margin-top: 24px;
     margin-left: 130px;
@@ -858,7 +839,7 @@ a {
   }
 
   .restau_text p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #footer__div__img {
@@ -879,8 +860,8 @@ a {
   }
 
   .nouveau {
-    padding: 10px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 18px;
     height: 20px;
   }
 
