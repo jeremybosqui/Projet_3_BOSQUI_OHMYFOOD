@@ -782,10 +782,6 @@ a {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background: red;
-  }
-
   #container3_parent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -813,7 +809,7 @@ a {
   }
 
   .fa-heart {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   #bouton__commander {
@@ -844,7 +840,7 @@ a {
   #container2_fonctionnement {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 15px;
+    margin: 20px;
   }
 
   #container2 {
@@ -901,6 +897,9 @@ a {
   #container3_parent > .container3_enfants {
     width: 100%;
   }
+  #container3 > #restau_title2 {
+    margin-bottom: 30px;
+  }
 
   #restau_img1,
 #restau_img2,
@@ -942,6 +941,7 @@ a {
 #restau_title2,
 #faux_titre {
     font-size: 25px;
+    text-align: center;
   }
 
   #saut_ligne {
