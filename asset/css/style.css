@@ -761,10 +761,6 @@ a {
 }
 
 @media screen and (max-width: 374px) {
-  body {
-    background: green;
-  }
-
   .nouveau {
     font-size: 13.5px;
   }
