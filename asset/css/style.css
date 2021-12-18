@@ -2,23 +2,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 /*============  ALL VARIABLE  =======*/
-header,
-main,
-footer {
-  animation-name: opacity;
-  animation-duration: 2500ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
-}
-
-@keyframes opacity {
+@keyframes loader {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
+    opacity: 0;
+  }
+}
+#loader {
+  background: white;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation: loader 2s ease-in-out 1.8s forwards;
+}
+
+#loader__animation {
+  width: 200px;
+  height: 200px;
+  border: 10px solid #cccccc;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 2.7s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
+  animation-fill-mode: forwards;
+  position: absolute;
+  margin: auto auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 5px 10px #99E2D0, 60px -16px lightgrey;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-top: 30px solid #9356DC;
     opacity: 1;
+    box-shadow: 5px 40px #99E2D0, 60px -16px lightgrey;
+  }
+  50% {
+    transform: rotate(360deg);
+    border-top: 40px solid #FF79DA;
+    opacity: 0.95;
+    box-shadow: 15px 10px #99E2D0, 20px -16px lightgrey;
+    border-radius: 50%;
+  }
+  74% {
+    border-radius: 30%;
+  }
+  75% {
+    transform: rotate(540deg);
+    opacity: 0.9;
+    box-shadow: 5px 10px #99E2D0, -20px 16px lightgrey;
+  }
+  85% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(720deg);
+    border-top: 50px solid #9356DC;
+    opacity: 0;
+    box-shadow: 25px 35px #99E2D0, 10px 26px lightgrey;
   }
 }
 /*===========================*/
