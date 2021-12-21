@@ -76,6 +76,27 @@
     box-shadow: 25px 35px #99E2D0, 10px 26px lightgrey;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+#scroll_top {
+  position: absolute;
+  top: 313vh;
+  right: 10px;
+  box-shadow: 0px 0px 5px 0px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+#scroll_top_link {
+  position: relative;
+  padding: 10px;
+  font-size: 15px;
+  top: 3.5px;
+  right: 3.5px;
+}
+
 /*===========================*/
 body, html {
   margin: 0px;
@@ -659,6 +680,23 @@ a {
   .heart {
     top: 2px;
   }
+
+  #container3_parent > .container3_enfants {
+    width: 85%;
+  }
+
+  #scroll_top {
+    top: 315vh;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  #container3_parent > .container3_enfants {
+    width: 87%;
+  }
+
+  #scroll_top {
+    top: 315vh;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #container3_parent {
@@ -759,8 +797,16 @@ a {
     box-shadow: inset #00000040 0px 2px 5px 0px;
     height: 450px;
   }
+
+  #scroll_top {
+    top: 208vh;
+  }
 }
 @media screen and (min-width: 1025px) {
+  #scroll_top {
+    display: none;
+  }
+
   #container3_parent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

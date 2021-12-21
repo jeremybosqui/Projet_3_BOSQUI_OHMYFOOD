@@ -3,6 +3,7 @@
 @import "mixin.scss";
 @import "variable.scss";
 @import "loader.scss";
+@import "ScrollTopBtn";
 /*===========================*/
 body, html {
     margin: 0px;
@@ -481,9 +482,26 @@ a {
     .heart {
         top: 2px;
     }
-    
+    #container3_parent {
+        >.container3_enfants {
+            width: 85%;
+        }
+    }
+    #scroll_top {
+        top: 315vh;
+    }
 }
-
+// media d'appoint pour le bouton scroll 
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    #container3_parent {
+        >.container3_enfants {
+            width: 87%;
+        }
+    }
+    #scroll_top {
+    top: 315vh;
+    }
+}
 
 // debut de la partie responsive en version tablette
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -491,6 +509,7 @@ a {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         margin: 20px;
+        
     }
     #container3 {
         height: 655px;
@@ -577,17 +596,16 @@ a {
         @include img-header-menus;
         height: 450px;
     }
-
-
-
-
-
-
+    #scroll_top {
+        top: 208vh;
+    }
 }
 
 // debut de la partie responsive en version desktop
 @media screen and (min-width: 1025px) {
-    
+    #scroll_top {
+        display: none;
+    }
     #container3_parent {
         display: grid;
         grid-template-columns: repeat(2,1fr);
