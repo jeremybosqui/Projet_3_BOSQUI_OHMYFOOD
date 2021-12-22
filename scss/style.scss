@@ -487,9 +487,6 @@ a {
             width: 85%;
         }
     }
-    #scroll_top {
-        top: 315vh;
-    }
 }
 // media d'appoint pour le bouton scroll 
 @media screen and (min-width: 375px) and (max-width: 767px) {
@@ -498,9 +495,7 @@ a {
             width: 87%;
         }
     }
-    #scroll_top {
-    top: 314vh;
-    }
+    
 }
 
 // debut de la partie responsive en version tablette
@@ -596,9 +591,7 @@ a {
         @include img-header-menus;
         height: 450px;
     }
-    #scroll_top {
-        top: 208vh;
-    }
+    
 }
 
 // debut de la partie responsive en version desktop
