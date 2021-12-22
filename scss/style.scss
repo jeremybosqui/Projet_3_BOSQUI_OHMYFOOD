@@ -596,7 +596,9 @@ a {
 
 // debut de la partie responsive en version desktop
 @media screen and (min-width: 1025px) {
-    
+    #scroll_top {
+        display: none;
+    }
     #container3_parent {
         display: grid;
         grid-template-columns: repeat(2,1fr);
